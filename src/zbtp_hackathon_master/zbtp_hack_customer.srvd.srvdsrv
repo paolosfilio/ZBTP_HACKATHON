@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for hackathon'
+define service ZBTP_HACK_CUSTOMER {
+  expose ZBTP_HACK_I_CE_CUSTOMER as Customer;
+}

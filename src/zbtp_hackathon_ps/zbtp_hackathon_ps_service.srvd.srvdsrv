@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Kunde'
+define service Zbtp_hackathon_ps_service {
+  expose zbtp_hackathon_ps_customer as Customer;
+}

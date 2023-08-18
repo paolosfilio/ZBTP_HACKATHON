@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZBP_HACKATHON_CUSTOMER'
+@OData.schema.name: 'cds_zui_btpusecase001customer'
+define service ZBP_HACKATHON_CUSTOMER {
+ expose ZCUSTOMER; 
+ } 

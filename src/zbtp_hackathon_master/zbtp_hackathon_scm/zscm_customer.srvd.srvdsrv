@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZSCM_CUSTOMER'
+@OData.schema.name: 'cds_zui_btpusecase001customer'
+define service ZSCM_CUSTOMER {
+ expose ZHACK_CUSTOMER; 
+ } 

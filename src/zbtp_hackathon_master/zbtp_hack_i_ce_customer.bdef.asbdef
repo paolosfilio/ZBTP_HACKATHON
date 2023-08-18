@@ -1,0 +1,25 @@
+unmanaged implementation in class zbp_btp_hack_i_ce_customer unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZBTP_HACK_I_CE_CUSTOMER alias Customer
+//late numbering
+lock master
+authorization master ( instance )
+etag master FirstName
+{
+
+  field ( readonly )
+  Customer,
+  FirstName,
+  LastName;
+
+  side effects { action lockCustomer affects $self;
+                 action releaseCustomer affects $self;
+                 action change_credit_limit affects $self; }
+
+  action ( features : instance ) lockCustomer;
+  action ( features : instance ) releaseCustomer;
+  action  change_credit_limit parameter zbtp_hack_param_credlim;
+
+  update;
+}

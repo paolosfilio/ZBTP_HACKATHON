@@ -1,0 +1,5 @@
+ implementation abstract;
+ define behavior for ZHACK_CUSTOMER
+  {
+  update;
+ }
